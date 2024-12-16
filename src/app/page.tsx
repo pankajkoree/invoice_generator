@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div>
-      <h1>Invoice Generator</h1>
+    <div className="relative flex xl:w-[70%] min-h-screen bg-black">
+      <h1 className="text-red-600">Invoice Generator</h1>
       <h2>Free online invoice maker</h2>
       <p>
         Create professional invoices online in just a few minutes with our free
