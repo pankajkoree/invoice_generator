@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: "Invoice generator",
