@@ -1,4 +1,4 @@
-import { BackgroundLines } from "@/components/ui/background-lines";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BackgroundLines>{children}</BackgroundLines>
+        {/* <BackgroundLines>{children}</BackgroundLines> */}
+        <BackgroundBeamsWithCollision>{children}</BackgroundBeamsWithCollision>
       </body>
     </html>
   );
