@@ -14,8 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <BackgroundLines>{children}</BackgroundLines> */}
-        <BackgroundBeamsWithCollision>{children}</BackgroundBeamsWithCollision>
+      <BackgroundBeamsWithCollision>
+            {children}
+            <Toaster position="bottom-left" />
+          </BackgroundBeamsWithCollision>
       </body>
     </html>
   );
