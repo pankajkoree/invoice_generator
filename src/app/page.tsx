@@ -1,5 +1,3 @@
-import "@/app/globals.css";
-
 export default function Home() {
   return (
     <div className="relative flex xl:w-[70%] min-h-screen bg-black">
