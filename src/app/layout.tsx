@@ -1,6 +1,6 @@
 // layout.tsx
 import { Toaster } from "react-hot-toast";
-import "@/app/globals.css"; // Import Tailwind styles
+import "./globals.css";
 
 export const metadata = {
   title: "Invoice generator",
