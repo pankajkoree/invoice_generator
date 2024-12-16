@@ -1,4 +1,3 @@
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 
@@ -15,10 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BackgroundBeamsWithCollision>
-          {children}
-          <Toaster position="bottom-left" />
-        </BackgroundBeamsWithCollision>
+        {children}
+        <Toaster position="bottom-left" />
       </body>
     </html>
   );
