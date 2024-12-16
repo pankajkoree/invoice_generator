@@ -14,9 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-          {children}
-        </BackgroundLines>
+        <BackgroundLines>{children}</BackgroundLines>
       </body>
     </html>
   );
