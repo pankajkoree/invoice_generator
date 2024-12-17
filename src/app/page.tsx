@@ -23,9 +23,11 @@ export default function Home() {
           <p className="text-3xl">Choose based on your invoice type</p>
         </div>
         <div className="relative flex gap-8">
-          <Button>Classical</Button>
-          <Button>Business</Button>
-          <Button>Moveepix</Button>
+          <Button className="text-blue-400 hover:text-white border-2 border-blue-400 hover:border-white rounded-none hover:bg-blue-400 transition duration-300 ease-in-out">
+            Classical
+          </Button>
+          <Button variant="business">Business</Button>
+          <Button variant="moveepix">Moveepix</Button>
         </div>
       </div>
       {/* ❌ div for suggestion and buttons */}3

@@ -20,9 +20,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         classical:
-          "bg-blue-200 text-primary-foreground shadow hover:bg-primary/90",
+          "text-blue-400 hover:text-white border-2 border-blue-400 hover:border-white rounded-none hover:bg-blue-400 transition duration-300 ease-in-out",
         business:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+          "bg-purple-600 text-primary-foreground shadow hover:bg-purple-800",
         moveepix:
           "bg-primary text-primary-foreground shadow hover:bg-primary/90",
       },
