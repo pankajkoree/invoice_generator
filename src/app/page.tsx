@@ -24,24 +24,35 @@ export default function Home() {
           <p className="text-3xl">Choose based on your invoice type</p>
         </div>
         <div className="relative flex gap-8">
-          <Button
-            variant="outline"
-            className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
-          >
-            Classical
-          </Button>
-          <Button
-            variant="outline"
-            className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
-          >
-            Business
-          </Button>
-          <Button
-            variant="outline"
-            className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
-          >
-            Moveepix
-          </Button>
+          {/* classical */}
+          <div>
+            <Button
+              variant="outline"
+              className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-slate-700 text-slate-700 hover:bg-slate-700 hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Classical
+            </Button>
+          </div>
+
+          {/* business */}
+          <div>
+            <Button
+              variant="outline"
+              className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Business
+            </Button>
+          </div>
+
+          {/* moveepix */}
+          <div>
+            <Button
+              variant="outline"
+              className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Moveepix
+            </Button>
+          </div>
         </div>
       </div>
       {/* ❌ div for suggestion and buttons */}
