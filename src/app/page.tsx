@@ -23,7 +23,10 @@ export default function Home() {
           <p className="text-3xl">Choose based on your invoice type</p>
         </div>
         <div className="relative flex gap-8">
-          <Button className="text-blue-400 hover:text-white border-2 border-blue-400 hover:border-white rounded-none hover:bg-blue-400 transition duration-300 ease-in-out">
+          <Button
+            variant="outline"
+            className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
+          >
             Classical
           </Button>
           <Button variant="business">Business</Button>
