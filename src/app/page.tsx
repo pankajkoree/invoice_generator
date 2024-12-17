@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
         </div>
       </div>
       {/* ❌ div for suggestion and buttons */}
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
