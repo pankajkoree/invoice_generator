@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Footer from "./components/Footer";
+import Image from "next/image";
+import classicalSample from "../../public/classic-sample.png";
+import businessSample from "../../public/business-sample.png";
+import moveepixSample from "../../public/moveepix-sample.png";
 
 export default function Home() {
   return (
@@ -18,6 +22,7 @@ export default function Home() {
         </p>
       </div>
       {/* ❌ div for heading, phrase and explanation for invoice */}
+
       {/* div for suggestion and buttons */}
       <div className="relative flex flex-col top-12 items-center gap-8">
         <div>
@@ -25,40 +30,57 @@ export default function Home() {
         </div>
         <div className="relative flex gap-8">
           {/* classical */}
-          <div>
+          <div className="flex flex-col gap-4">
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-slate-700 text-slate-700 hover:bg-slate-700 hover:text-white transition-all duration-300 ease-in-out"
             >
               Classical
             </Button>
+            <Image
+              src={classicalSample}
+              alt="classicalSample"
+              className="xl:w-[200px] xl:h-[290px] border border-slate-700"
+            />
           </div>
 
           {/* business */}
-          <div>
+          <div className="flex flex-col gap-4">
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out"
             >
               Business
             </Button>
+            <Image
+              src={businessSample}
+              alt="businessSample"
+              className="xl:w-[200px] xl:h-[290px] border border-green-500"
+            />
           </div>
 
           {/* moveepix */}
-          <div>
+          <div className="flex flex-col gap-4">
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white transition-all duration-300 ease-in-out"
             >
               Moveepix
             </Button>
+            <Image
+              src={moveepixSample}
+              alt="moveepixSample"
+              className="xl:w-[200px] xl:h-[290px] border border-yellow-500"
+            />
           </div>
         </div>
       </div>
       {/* ❌ div for suggestion and buttons */}
 
       {/* Footer */}
-      <Footer />
+      <div className="relative flex flex-col top-12 items-center gap-8">
+        <Footer />
+      </div>
     </div>
   );
 }
