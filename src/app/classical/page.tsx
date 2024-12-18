@@ -43,12 +43,52 @@ const Classical = () => {
         </div>
 
         {/* logo for billed by and billed to */}
-        <div>
+        <div className="grid grid-cols-2 gap-2 p-4">
           {/* billed by */}
-          <div></div>
+          <div className="flex flex-col bg-blue-100 p-2 gap-4 rounded-xl">
+            <Label className="text-xl">
+              Billed By <span className="text-14px">(Your details)</span>
+            </Label>
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter biller's name"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter the country name"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter contact number"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter address"
+            />
+          </div>
 
           {/* billed to */}
-          <div></div>
+          <div className="flex flex-col bg-blue-100 p-2 gap-4 rounded-xl">
+            <Label className="text-xl">
+              Billed To <span className="text-14px">(Client details)</span>
+            </Label>
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter client's name"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter the client's country"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter client's contact number"
+            />
+            <Input
+              className="border border-bottom border-blue-500"
+              placeholder="enter client's address"
+            />
+          </div>
         </div>
 
         {/* save */}
