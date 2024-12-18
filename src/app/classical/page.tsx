@@ -50,19 +50,19 @@ const Classical = () => {
               Billed By <span className="text-14px">(Your details)</span>
             </Label>
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter biller's name"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter the country name"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter contact number"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter address"
             />
           </div>
@@ -73,21 +73,60 @@ const Classical = () => {
               Billed To <span className="text-14px">(Client details)</span>
             </Label>
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter client's name"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter the client's country"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter client's contact number"
             />
             <Input
-              className="border border-bottom border-blue-500"
+              className="border border-slate-400"
               placeholder="enter client's address"
             />
+          </div>
+        </div>
+
+        {/* item's div */}
+        <div className="flex flex-col p-4">
+          {/* item label */}
+          <div className="flex bg-purple-600 rounded-t-xl text-xl text-white p-2">
+            <p className="xl:w-[40%]">Item</p>
+            <p className="xl:w-[10%]">GST</p>
+            <p className="xl:w-[10%]">Quantity</p>
+            <p className="xl:w-[10%]">Rate</p>
+            <p className="xl:w-[10%]">Amount</p>
+            <p className="xl:w-[10%]">C. GST</p>
+            <p className="xl:w-[10%]">Total</p>
+          </div>
+
+          {/* item's inputs */}
+          <div className="flex rounded-t-xl text-xl text-white p-2 gap-1">
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
+            <div className="xl:w-[40%]">
+              <Input placeholder="item's name" />
+            </div>
           </div>
         </div>
 
