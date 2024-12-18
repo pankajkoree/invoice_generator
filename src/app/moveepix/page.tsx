@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import plus from "../../../public/plus.png";
 import Image from "next/image";
 
-const Classical = () => {
+const Moveepix = () => {
   return (
     <div className="relative flex flex-col xl:w-[60%] xl:min-h-screen xl:left-[20%] text-center text-slate-800 gap-12">
       {/* heading */}
@@ -154,4 +154,4 @@ const Classical = () => {
   );
 };
 
-export default Classical;
+export default Moveepix;
