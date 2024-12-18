@@ -109,23 +109,28 @@ const Classical = () => {
             <div className="xl:w-[40%]">
               <Input placeholder="item's name" />
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <Input />
+              <p> % </p>
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <Input />
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <p> ₹ </p>
+              <Input />
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <p> ₹ </p>
+              <Label className="text-xl">{1}</Label>
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <p> ₹ </p>
+              <Label className="text-xl">{1}</Label>
             </div>
-            <div className="xl:w-[40%]">
-              <Input placeholder="item's name" />
+            <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <p> ₹ </p>
+              <Label className="text-xl">{1}</Label>
             </div>
           </div>
         </div>
