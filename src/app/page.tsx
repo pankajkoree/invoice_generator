@@ -1,13 +1,22 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Footer from "./components/Footer";
 import Image from "next/image";
 import classicalSample from "../../public/classic-sample.png";
 import businessSample from "../../public/business-sample.png";
 import moveepixSample from "../../public/moveepix-sample.png";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const gotoClassical = () => router.push("/classical");
+  const gotoBusiness = () => router.push("/business");
+  const gotoMoveepix = () => router.push("/moveepix");
+
   return (
-    <div className="relative flex flex-col xl:w-[70%] min-h-screen xl:left-[15%] text-center text-slate-800 gap-12">
+    <div className="relative flex flex-col xl:w-[70%] xl:min-h-screen xl:left-[15%] text-center text-slate-800 gap-12">
       {/* div for heading, phrase and explanation for invoice */}
       <div className="relative flex flex-col top-12 items-center gap-8">
         <h1 className="text-slate-700 text-6xl font-extrabold">
@@ -30,7 +39,10 @@ export default function Home() {
         </div>
         <div className="relative flex gap-8">
           {/* classical */}
-          <div className="flex flex-col gap-4">
+          <div
+            className="flex flex-col gap-4 cursor-pointer"
+            onClick={gotoClassical}
+          >
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-slate-700 text-slate-700 hover:bg-slate-700 hover:text-white transition-all duration-300 ease-in-out"
@@ -45,7 +57,10 @@ export default function Home() {
           </div>
 
           {/* business */}
-          <div className="flex flex-col gap-4">
+          <div
+            className="flex flex-col gap-4 cursor-pointer"
+            onClick={gotoBusiness}
+          >
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out"
@@ -60,7 +75,10 @@ export default function Home() {
           </div>
 
           {/* moveepix */}
-          <div className="flex flex-col gap-4">
+          <div
+            className="flex flex-col gap-4 cursor-pointer"
+            onClick={gotoMoveepix}
+          >
             <Button
               variant="outline"
               className="relative px-6 py-3 xl:text-2xl xl:p-6 font-semibold border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white transition-all duration-300 ease-in-out"

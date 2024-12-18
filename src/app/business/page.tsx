@@ -1,6 +1,6 @@
 import React from "react";
 
-const page = () => {
+const Business = () => {
   return (
     <div>
       <h1>Business Invoice</h1>
@@ -8,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Business;
