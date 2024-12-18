@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import plus from "../../../public/plus.png";
 import Image from "next/image";
 
-const Classical = () => {
+const Business = () => {
   return (
     <div className="relative flex flex-col xl:w-[60%] xl:min-h-screen xl:left-[20%] text-center text-slate-800 gap-12">
       {/* heading */}
@@ -99,7 +99,7 @@ const Classical = () => {
         {/* item's div */}
         <div className="flex flex-col p-4">
           {/* item label */}
-          <div className="flex bg-purple-600 rounded-t-xl text-xl text-white p-2">
+          <div className="flex bg-green-600 rounded-t-xl text-xl text-white p-2">
             <p className="xl:w-[40%]">Item</p>
             <p className="xl:w-[10%]">GST</p>
             <p className="xl:w-[10%]">Quantity</p>
@@ -154,4 +154,4 @@ const Classical = () => {
   );
 };
 
-export default Classical;
+export default Business;
