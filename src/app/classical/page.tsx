@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -12,9 +13,9 @@ const Classical = () => {
       </div>
 
       {/* details filling div */}
-      <div>
+      <div className="bg-slate-50 rounded-xl">
         {/* sub-heading */}
-        <div>
+        <div className="flex justify-center top-2 p-2">
           <h2 className="text-2xl">Invoice</h2>
         </div>
 
@@ -42,18 +43,19 @@ const Classical = () => {
         </div>
 
         {/* logo for billed by and billed to */}
-            <div>
-              {/* billed by */}
-              <div></div>
+        <div>
+          {/* billed by */}
+          <div></div>
 
-               {/* billed to */}
-               <div></div>
-            </div>
+          {/* billed to */}
+          <div></div>
+        </div>
 
+        {/* save */}
+        <div className="flex p-2 justify-center">
+          <Button>Save & continue</Button>
+        </div>
       </div>
-
-      {/* save */}
-      <div>{/* div */}</div>
     </div>
   );
 };
