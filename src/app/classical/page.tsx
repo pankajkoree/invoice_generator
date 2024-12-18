@@ -10,7 +10,20 @@ const Classical = () => {
 
       {/* details filling div */}
       <div>
-        <h2>Invoice</h2>
+        {/* sub-heading */}
+        <div>
+          <h2>Invoice</h2>
+        </div>
+
+        {/* logo, invoice no. and date */}
+        <div>
+          {/* date and invoice no. */}
+          <div></div>
+          {/* logo */}
+          <div></div>
+        </div>
+
+        {/* logo for billed by and billed to */}
       </div>
 
       {/* save */}
