@@ -1,3 +1,6 @@
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
 const Classical = () => {
   return (
     <div className="relative flex flex-col xl:w-[70%] xl:min-h-screen xl:left-[15%] text-center text-slate-800 gap-12">
@@ -18,7 +21,16 @@ const Classical = () => {
         {/* logo, invoice no. and date */}
         <div>
           {/* date and invoice no. */}
-          <div></div>
+          <div>
+            <div className="relative flex">
+              <Label>Invoice No.</Label>
+              <Input />
+            </div>
+            <div className="relative flex">
+              <Label>Invoice Date</Label>
+              <Input type="date" />
+            </div>
+          </div>
           {/* logo */}
           <div></div>
         </div>
