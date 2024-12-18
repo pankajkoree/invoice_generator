@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+import plus from "../../../public/plus.png";
+import Image from "next/image";
+
 const Classical = () => {
   return (
     <div className="relative flex flex-col xl:w-[60%] xl:min-h-screen xl:left-[20%] text-center text-slate-800 gap-12">
@@ -132,6 +135,11 @@ const Classical = () => {
               <p> ₹ </p>
               <Label className="text-xl">{1}</Label>
             </div>
+          </div>
+
+          <div className="relative flex items-center justify-center gap-2 p-2 border-2 border-dashed cursor-pointer">
+            <Image src={plus} alt="plus" className="xl:w-[20px] xl:h-[20px]" />
+            <p className="text-xl">Add new line</p>
           </div>
         </div>
 
