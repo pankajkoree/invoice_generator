@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-
 import plus from "../../../public/plus.png";
 import Image from "next/image";
 import { useState } from "react";
