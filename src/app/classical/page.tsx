@@ -19,6 +19,8 @@ interface Item {
 const Classical = () => {
   const [items, setItems] = useState<Item[]>([{ id: 1 }]);
 
+  console.log(items);
+
   const addNewLine = () => {
     setItems((prevItems) => [...prevItems, { id: prevItems.length + 1 }]);
   };
@@ -163,7 +165,7 @@ const Classical = () => {
               <div className="xl:w-[40%]">
                 <input
                   placeholder="item's name"
-                  className="w-full rounded p-2 bg-gray-700 text-white"
+                  className="w-full rounded p-2 border text-white"
                   value={item.name || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -177,7 +179,7 @@ const Classical = () => {
               <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
-                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  className="w-full rounded p-2 border text-white text-center"
                   value={item.percentage || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -197,7 +199,7 @@ const Classical = () => {
               <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
-                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  className="w-full rounded p-2 border text-white text-center"
                   value={item.quantity || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -214,7 +216,7 @@ const Classical = () => {
                 <p>₹</p>
                 <input
                   type="number"
-                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  className="w-full rounded p-2 border text-white text-center"
                   value={item.price || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -249,7 +251,7 @@ const Classical = () => {
             className="relative flex items-center justify-center gap-2 p-2 border-2 border-dashed cursor-pointer"
             onClick={addNewLine}
           >
-            <Image src={plus} alt="plus" className="xl:w-[20px] xl:h-[20px]" />
+            <Image src={plus} alt="plus" className="w-[20px] h-[20px]" />
             <p className="text-xl">Add new line</p>
           </div>
         </div>
