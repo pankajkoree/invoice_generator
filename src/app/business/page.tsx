@@ -115,7 +115,7 @@ const Business = () => {
         {/* item's div */}
         <div className="flex flex-col p-4">
           {/* item label */}
-          <div className="flex bg-slate-600 rounded-t-xl text-xl text-white p-2">
+          <div className="flex bg-green-600 rounded-t-xl text-xl text-white p-2">
             <p className="xl:w-[40%]">Item</p>
             <p className="xl:w-[10%]">GST</p>
             <p className="xl:w-[10%]">Quantity</p>
