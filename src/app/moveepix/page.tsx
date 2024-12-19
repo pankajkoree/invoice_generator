@@ -29,7 +29,7 @@ const Moveepix = () => {
       {/* heading */}
       <div>
         <h1 className="text-2xl">
-          Create <b>classical</b> invoice in few minutes
+          Create <b>Moveepix</b> invoice in few minutes
         </h1>
       </div>
 
