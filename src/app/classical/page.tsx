@@ -6,8 +6,23 @@ import { Label } from "@/components/ui/label";
 
 import plus from "../../../public/plus.png";
 import Image from "next/image";
+import { useState } from "react";
+
+interface Item {
+  id: number;
+  name?: string;
+  percentage?: number;
+  quantity?: number;
+  price?: number;
+}
 
 const Classical = () => {
+  const [items, setItems] = useState<Item[]>([{ id: 1 }]);
+
+  const addNewLine = () => {
+    setItems((prevItems) => [...prevItems, { id: prevItems.length + 1 }]);
+  };
+
   return (
     <div className="relative flex flex-col xl:w-[60%] xl:min-h-screen xl:left-[20%] text-center text-slate-800 gap-12">
       {/* heading */}
@@ -110,7 +125,7 @@ const Classical = () => {
           </div>
 
           {/* item's inputs */}
-          <div className="flex rounded-t-xl text-xl text-white p-2 gap-1">
+          {/* <div className="flex rounded-t-xl text-xl text-white p-2 gap-1">
             <div className="xl:w-[40%]">
               <Input placeholder="item's name" />
             </div>
@@ -137,9 +152,103 @@ const Classical = () => {
               <p> ₹ </p>
               <Label className="text-xl">{1}</Label>
             </div>
-          </div>
+          </div> */}
 
-          <div className="relative flex items-center justify-center gap-2 p-2 border-2 border-dashed cursor-pointer">
+          {/* Items Inputs */}
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className="flex rounded-t-xl text-xl text-white p-2 gap-1"
+            >
+              <div className="xl:w-[40%]">
+                <input
+                  placeholder="item's name"
+                  className="w-full rounded p-2 bg-gray-700 text-white"
+                  value={item.name || ""}
+                  onChange={(e) =>
+                    setItems((prev) =>
+                      prev.map((i) =>
+                        i.id === item.id ? { ...i, name: e.target.value } : i
+                      )
+                    )
+                  }
+                />
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <input
+                  type="number"
+                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  value={item.percentage || ""}
+                  onChange={(e) =>
+                    setItems((prev) =>
+                      prev.map((i) =>
+                        i.id === item.id
+                          ? {
+                              ...i,
+                              percentage: parseFloat(e.target.value) || 0,
+                            }
+                          : i
+                      )
+                    )
+                  }
+                />
+                <p>%</p>
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <input
+                  type="number"
+                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  value={item.quantity || ""}
+                  onChange={(e) =>
+                    setItems((prev) =>
+                      prev.map((i) =>
+                        i.id === item.id
+                          ? { ...i, quantity: parseInt(e.target.value) || 0 }
+                          : i
+                      )
+                    )
+                  }
+                />
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <p>₹</p>
+                <input
+                  type="number"
+                  className="w-full rounded p-2 bg-gray-700 text-white text-center"
+                  value={item.price || ""}
+                  onChange={(e) =>
+                    setItems((prev) =>
+                      prev.map((i) =>
+                        i.id === item.id
+                          ? { ...i, price: parseFloat(e.target.value) || 0 }
+                          : i
+                      )
+                    )
+                  }
+                />
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <p>₹</p>
+                <label className="text-xl">
+                  {(item.price || 0) * (item.quantity || 0)}
+                </label>
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <p>₹</p>
+                <label className="text-xl">{index + 1}</label>
+              </div>
+              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+                <p>₹</p>
+                <label className="text-xl">{index + 1}</label>
+              </div>
+            </div>
+          ))}
+
+          {/* Add New Line Button */}
+          <div
+            className="relative flex items-center justify-center gap-2 p-2 border-2 border-dashed cursor-pointer"
+            onClick={addNewLine}
+          >
             <Image src={plus} alt="plus" className="xl:w-[20px] xl:h-[20px]" />
             <p className="text-xl">Add new line</p>
           </div>
