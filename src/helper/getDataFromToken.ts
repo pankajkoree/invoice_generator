@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { NextRequest } from "next/server"; // Adjust if using a different framework
+import { NextRequest } from "next/server";
 
 export const getDataFromToken = async (request: NextRequest) => {
   try {
