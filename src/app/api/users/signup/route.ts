@@ -31,7 +31,13 @@ export const POST = async (request: NextRequest) => {
     });
 
     const savedUser = await newUser.save();
-    await sendMail({ mail, mailType = "VERIFY", userId: savedUser._id });
+    await sendMail({ email, emailType: "VERIFY", userId: savedUser._id });
+
+    return NextResponse.json({
+      message: "User created successfully",
+      success: true,
+      savedUser,
+    });
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "An unknown error" },
