@@ -4,23 +4,27 @@ import bcryptjs from "bcryptjs";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 interface sendMailOptions {
-  mail: string;
-  mailType: string;
+  email: string;
+  emailType: string;
   userId: string;
 }
 
-export const sendMail = async ({ mail, mailType, userId }: sendMailOptions) => {
+export const sendMail = async ({
+  email,
+  emailType,
+  userId,
+}: sendMailOptions) => {
   try {
     const hashedToken = await bcryptjs.hash(userId.toString(), 10);
 
-    if (mailType === "VERIFY") {
+    if (emailType === "VERIFY") {
       await User.findByIdAndUpdate(userId, {
         $set: {
           verifyToken: hashedToken,
           verifyTokenExpiry: Date.now() + 3600000,
         },
       });
-    } else if (mailType === "RESET") {
+    } else if (emailType === "RESET") {
       await User.findByIdAndUpdate(userId, {
         $set: {
           forgotPassword: hashedToken,
@@ -40,12 +44,12 @@ export const sendMail = async ({ mail, mailType, userId }: sendMailOptions) => {
 
     const mailOptions = {
       from: "tcsuk1998@gmail.com",
-      to: mail,
-      subject: mailType === "VERIFY" ? "Verify your email" : "reset password",
+      to: email,
+      subject: emailType === "VERIFY" ? "Verify your email" : "reset password",
       html: ` <p>Click <a href="${
         process.env.DOMAIN
       }/verifyemail?token=${hashedToken}">here</a> to ${
-        mailType === "VERIFY" ? "verify your email" : "reset your password"
+        emailType === "VERIFY" ? "verify your email" : "reset your password"
       }
         or copy and paste the link below in your browser. <br> ${
           process.env.DOMAIN
