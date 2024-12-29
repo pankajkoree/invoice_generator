@@ -1,9 +1,9 @@
-import React from "react";
+"use client";
 
 const Signup = () => {
   return (
     <div>
-      <h1>Sign up</h1>
+     
     </div>
   );
 };
