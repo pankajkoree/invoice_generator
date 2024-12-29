@@ -2,45 +2,83 @@ import { NextRequest, NextResponse } from "next/server";
 import { connect } from "@/database/connector";
 import User from "@/models/userModel";
 import bcryptjs from "bcryptjs";
-import { sendMail } from "@/helper/mailer";
+import jwt from "jsonwebtoken";
 
 connect();
 
-export const GET = async (request: NextRequest) => {
+export const POST = async (request: NextRequest) => {
   try {
     const requestBody = await request.json();
 
-    const { username, email, password } = requestBody;
+    const { email, password } = requestBody;
 
     const user = await User.findOne({ email });
 
-    if (user) {
+    if (!user) {
       return NextResponse.json(
-        { error: "User already exits" },
+        {
+          error: "User doesn't exist",
+        },
         { status: 400 }
       );
     }
 
-    var salt = await bcryptjs.genSalt(10);
-    const hashedPassword = await bcryptjs.hash(password, salt);
+    const validPassword = await bcryptjs.compare(password, user.password);
 
-    const newUser = new User({
-      username,
-      email,
-      password: hashedPassword,
+    if (!validPassword) {
+      return NextResponse.json(
+        {
+          error: "Incorrect password",
+        },
+        {
+          status: 400,
+        }
+      );
+    }
+
+    // creating token for the user
+    const tokenData = {
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      loggedIn: true,
+    };
+
+    const secret = process.env.TOKEN_SECRET;
+    if (!secret) {
+      throw new Error(
+        "TOKEN_SECRET is not defined in the environment variables."
+      );
+    }
+
+    const token = await jwt.sign(tokenData, secret, {
+      expiresIn: "1d",
     });
 
-    const savedUser = await newUser.save();
-    await sendMail({ email, emailType: "VERIFY", userId: savedUser._id });
-
-    return NextResponse.json({
-      message: "User created successfully",
+    // including userdata in the response
+    const response = NextResponse.json({
+      message: "Logged in success",
       success: true,
-      savedUser,
+      user: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        loggedIn: true,
+      },
     });
+
+    response.cookies.set("token", token, {
+      httpOnly: true,
+      path: "/",
+    });
+
+    return response;
   } catch (error) {
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : "An unknown error" },
+      {
+        error:
+          error instanceof Error ? error.message : "An unknown error occurred",
+      },
       { status: 500 }
     );
   }
