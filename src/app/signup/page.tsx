@@ -38,7 +38,7 @@ const Signup = () => {
           />
         </div>
 
-        <Button>Signup</Button>
+        <Button variant="signup">Signup</Button>
       </form>
     </div>
   );
