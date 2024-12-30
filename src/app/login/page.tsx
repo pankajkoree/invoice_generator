@@ -64,7 +64,7 @@ const Login = () => {
             <Label className="text-[16px]">Password</Label>
             <Input
               className="relative flex border-2 border-gray-400 focus:border-purple-500 focus:border-2"
-              type="text"
+              type="password"
               placeholder="must be at least 8 characters"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
