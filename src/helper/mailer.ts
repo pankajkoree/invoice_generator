@@ -21,14 +21,14 @@ export const sendMail = async ({
       await User.findByIdAndUpdate(userId, {
         $set: {
           verifyToken: hashedToken,
-          verifyTokenExpiry: new Date().toLocaleString() + 3600000,
+          verifyTokenExpiry: new Date(Date.now()+3600000).toLocaleString(),
         },
       });
     } else if (emailType === "RESET") {
       await User.findByIdAndUpdate(userId, {
         $set: {
           forgotPassword: hashedToken,
-          verifyPasswordTokenExpiry: new Date().toLocaleString() + 3600000,
+          verifyPasswordTokenExpiry: Date.now() + 3600000,
         },
       });
     }
