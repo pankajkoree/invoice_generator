@@ -25,7 +25,8 @@ const buttonVariants = cva(
           "bg-purple-600 text-primary-foreground shadow hover:bg-purple-800",
         moveepix:
           "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        signup: "border border-green-400",
+        signup:
+          "border border-green-400 hover:border-none hover:bg-green-400 rounded-none",
       },
       size: {
         default: "h-9 px-4 py-2",
