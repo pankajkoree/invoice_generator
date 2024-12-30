@@ -51,22 +51,24 @@ const Signup = () => {
         >
           {/* username */}
           <div className="relative flex flex-col gap-2">
-            <Label className="text-[16px]">Username</Label>
+            <Label className="text-[16px]" htmlFor="username">Username</Label>
             <Input
               className="relative flex border-2 border-gray-400 focus:border-purple-500 focus:border-2"
               type="text"
               placeholder="enter your fullname"
               value={user.username}
+              id="username"
               onChange={(e) => setUser({ ...user, username: e.target.value })}
               required
             />
           </div>
           {/* email */}
           <div className="relative flex flex-col gap-2">
-            <Label className="text-[16px]">Email</Label>
+            <Label className="text-[16px]" htmlFor="email">Email</Label>
             <Input
               className="relative flex border-2 border-gray-400 focus:border-purple-500 focus:border-2"
-              type="text"
+              type="email"
+              id="email"
               placeholder="enter your email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
@@ -75,10 +77,11 @@ const Signup = () => {
           </div>
           {/* password */}
           <div className="relative flex flex-col gap-2">
-            <Label className="text-[16px]">Password</Label>
+            <Label className="text-[16px]" htmlFor="password">Password</Label>
             <Input
               className="relative flex border-2 border-gray-400 focus:border-purple-500 focus:border-2"
               type="password"
+              id="password"
               placeholder="must be at least 8 characters"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
