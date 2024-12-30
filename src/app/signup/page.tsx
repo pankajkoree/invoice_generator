@@ -23,7 +23,7 @@ const Signup = () => {
     try {
       const response = await axios.post("/api/users/signup", user);
       toast.success("Successfully signed up");
-      router.push("/login")
+      router.push("/login");
     } catch (error) {
       toast.error(
         error instanceof Error ? error.message : "Something went wrong"
