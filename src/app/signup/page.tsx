@@ -1,32 +1,35 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Signup = () => {
   return (
-    <div className="relative flex flex-col xl:w-[30%] xl:h-[70%] xl:left-[20%] text-slate-800 bg-green-400 items-center">
+    <div className="relative flex flex-col xl:w-[30%] xl:left-[35%] text-xl text-slate-600 items-center gap-8 p-4 border-4 border-white rounded-xl bg-purple-100">
       {/* heading and suggestion caption */}
       <div className="relative flex flex-col text-center">
-        <h1 className="text-xl font-semibold">Create your account</h1>
+        <h1 className="text-2xl font-semibold text-slate-800">
+          Create your account
+        </h1>
         <p>Create your profile in less than 2 minutes</p>
       </div>
 
       {/* credentials filling section */}
-      <div className="relative flex flex-col w-full">
+      <form className="relative flex flex-col xl:w-[90%] gap-4">
         {/* username */}
-        <div className="relative flex flex-col xl:w-[90%] left-[5%]">
-          <Label>Username</Label>
+        <div className="relative flex flex-col gap-2">
+          <Label className="text-[16px]">Username</Label>
           <Input type="text" placeholder="enter your fullname" required />
         </div>
         {/* email */}
-        <div>
-          <Label>Email</Label>
+        <div className="relative flex flex-col gap-2">
+          <Label className="text-[16px]">Email</Label>
           <Input type="text" placeholder="enter your email" required />
         </div>
         {/* password */}
-        <div>
-          <Label>Password</Label>
+        <div className="relative flex flex-col gap-2">
+          <Label className="text-[16px]">Password</Label>
           <Input
             type="text"
             placeholder="must be at least 8 characters"
@@ -34,10 +37,9 @@ const Signup = () => {
             required
           />
         </div>
-      </div>
 
-      {/* OAuth */}
-      <div></div>
+        <Button>Signup</Button>
+      </form>
     </div>
   );
 };
