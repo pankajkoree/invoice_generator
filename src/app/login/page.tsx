@@ -10,6 +10,7 @@ const Login = () => {
     <div className="flex items-center">
       <div className="relative flex flex-col xl:w-[22%] xl:left-[39%] top-[200px] text-slate-600 items-center gap-4 p-4 border-4 border-white rounded-xl bg-purple-100">
         {/* heading and suggestion caption */}
+        <h1>Login page</h1>
         <div className="relative flex flex-col text-center">
           <h1 className="text-2xl font-semibold text-slate-800">
             Create your account
