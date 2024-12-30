@@ -56,6 +56,7 @@ const Signup = () => {
               className="relative flex border-2 border-gray-400 focus:border-purple-500 focus:border-2"
               type="text"
               placeholder="enter your fullname"
+              autoComplete="current-username"
               value={user.username}
               id="username"
               onChange={(e) => setUser({ ...user, username: e.target.value })}
@@ -70,6 +71,7 @@ const Signup = () => {
               type="email"
               id="email"
               placeholder="enter your email"
+              autoComplete="current-email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
               required
@@ -83,13 +85,14 @@ const Signup = () => {
               type="password"
               id="password"
               placeholder="must be at least 8 characters"
+              autoComplete="current-password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
               required
             />
           </div>
 
-          <Button variant="signup">Signup</Button>
+          <Button type="submit" variant="signup">Signup</Button>
           <p className="relative flex justify-center gap-1">
             Already have an account?{" "}
             <Link href="/login" className="hover:underline text-blue-400">
