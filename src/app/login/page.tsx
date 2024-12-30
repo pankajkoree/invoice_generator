@@ -72,7 +72,7 @@ const Login = () => {
             />
           </div>
 
-          <Button variant="signup">Signup</Button>
+          <Button type="submit" variant="signup">Signup</Button>
           <p className="text-sm text-center mt-4 text-gray-700 dark:text-gray-300">
             Forgot{" "}
             <Link
