@@ -23,7 +23,7 @@ const Login = () => {
     try {
       const response = await axios.post("/api/users/login", user);
       if (response.status === 200) {
-        toast.success("logged in successful")
+        toast.success("logged in successful");
         router.push("/");
       }
     } catch (error) {
@@ -72,14 +72,16 @@ const Login = () => {
             />
           </div>
 
-          <Button type="submit" variant="signup">Signup</Button>
+          <Button type="submit" variant="signup">
+            Signup
+          </Button>
           <p className="text-sm text-center mt-4 text-gray-700 dark:text-gray-300">
             Forgot{" "}
             <Link
-              href={`/forgotCredentials`}
+              href={`/forgotPassword`}
               className="text-blue-500 hover:underline"
             >
-              username/password?
+              password?
             </Link>
           </p>
           <p className="text-sm text-center text-gray-700 dark:text-gray-300">
