@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const token = request.cookies.get("token");
   const path = request.nextUrl.pathname;
 
-  if (path === "/carts") {
+  if (path === "/classical") {
     if (token?.value) {
       return NextResponse.next();
     } else {
