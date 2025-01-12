@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
 
   if (path === "/classical") {
     if (token?.value) {
-      return NextResponse.next();
+      return NextResponse.next().next();
     } else {
       return NextResponse.redirect(new URL("/login", request.url));
     }
