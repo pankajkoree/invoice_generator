@@ -161,10 +161,10 @@ const Classical = () => {
               key={item.id}
               className="flex rounded-t-xl text-xl text-white p-2 gap-1"
             >
-              <div className="xl:w-[40%]">
+              <div className="xl:w-[40%] text-slate-700">
                 <input
                   placeholder="item's name"
-                  className="w-full rounded p-2 border text-white"
+                  className="w-full rounded p-2 border"
                   value={item.name || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -178,7 +178,7 @@ const Classical = () => {
               <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
-                  className="w-full rounded p-2 border text-white text-center"
+                  className="w-full rounded p-2 border text-center"
                   value={item.percentage || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -198,7 +198,7 @@ const Classical = () => {
               <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
-                  className="w-full rounded p-2 border text-white text-center"
+                  className="w-full rounded p-2 border text-center"
                   value={item.quantity || ""}
                   onChange={(e) =>
                     setItems((prev) =>
@@ -215,7 +215,7 @@ const Classical = () => {
                 <p>₹</p>
                 <input
                   type="number"
-                  className="w-full rounded p-2 border text-white text-center"
+                  className="w-full rounded p-2 border text-center"
                   value={item.price || ""}
                   onChange={(e) =>
                     setItems((prev) =>
