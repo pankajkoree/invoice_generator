@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       <div className="relative flex flex-col xl:w-[70%] xl:left-[15%] text-center text-slate-800 gap-12">
         {/* div for heading, phrase and explanation for invoice */}
-        <div className="relative flex flex-col items-center top-4  gap-4">
+        <div className="relative flex flex-col items-center top-8 gap-4">
           <h1 className="text-slate-700 text-6xl font-bold">
             Invoice Generator
           </h1>
@@ -34,7 +34,7 @@ export default function Home() {
         {/* ❌ div for heading, phrase and explanation for invoice */}
 
         {/* div for suggestion and buttons */}
-        <div className="relative flex flex-col items-center gap-4">
+        <div className="relative flex flex-col items-center top-8 gap-4">
           <div>
             <p className="text-3xl">Choose based on your invoice type</p>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
         {/* ❌ div for suggestion and buttons */}
 
         {/* Footer */}
-        <div className="relative flex flex-col items-center gap-4">
+        <div className="relative flex flex-col items-center top-12 gap-4">
           <Footer />
         </div>
       </div>
