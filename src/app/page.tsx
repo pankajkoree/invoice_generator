@@ -14,14 +14,9 @@ export default function Home() {
   const gotoClassical = () => router.push("/classical");
   const gotoBusiness = () => router.push("/business");
   const gotoMoveepix = () => router.push("/moveepix");
-  const referToLogin = () => router.push("/login");
 
   return (
     <div>
-      <div className="relative flex justify-end right-4 top-4 gap-8">
-        <Button onClick={referToLogin}>Login</Button>
-      </div>
-
       <div className="relative flex flex-col xl:w-[70%] xl:left-[15%] text-center text-slate-800 gap-12">
         {/* div for heading, phrase and explanation for invoice */}
         <div className="relative flex flex-col items-center top-4  gap-4">
