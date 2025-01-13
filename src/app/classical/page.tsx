@@ -19,10 +19,12 @@ interface Item {
 const Classical = () => {
   const [items, setItems] = useState<Item[]>([{ id: 1 }]);
 
-  console.log(items);
-
   const addNewLine = () => {
     setItems((prevItems) => [...prevItems, { id: prevItems.length + 1 }]);
+  };
+
+  const deleteItem = () => {
+    console.log(items);
   };
 
   return (
@@ -176,7 +178,7 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-center"
@@ -196,7 +198,7 @@ const Classical = () => {
                 />
                 <p>%</p>
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-center"
@@ -212,7 +214,7 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <input
                   type="number"
@@ -229,22 +231,30 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">
                   {(item.price || 0) * (item.quantity || 0)}
                 </label>
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
-              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
-              <div>
-                <Image src={deleteIcon} alt="delete" className="xl:w-6" />
+              {/* delete item button */}
+              <div
+                className="relative flex justify-center items-center cursor-pointer"
+                onClick={deleteItem}
+              >
+                <Image
+                  src={deleteIcon}
+                  alt="delete"
+                  className="xl:w-8 xl:h-8 hover:bg-red-300 hover:rounded-full hover:"
+                />
               </div>
             </div>
           ))}
