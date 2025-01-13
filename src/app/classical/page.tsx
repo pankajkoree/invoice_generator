@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import plus from "../../../public/plus.png";
+import deleteIcon from "../../../public/delete.png";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -175,7 +176,7 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-center"
@@ -195,7 +196,7 @@ const Classical = () => {
                 />
                 <p>%</p>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-center"
@@ -211,7 +212,7 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <p>₹</p>
                 <input
                   type="number"
@@ -228,19 +229,22 @@ const Classical = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">
                   {(item.price || 0) * (item.quantity || 0)}
                 </label>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[9%] flex justify-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
+              </div>
+              <div>
+                <Image src={deleteIcon} alt="delete" className="xl:w-6" />
               </div>
             </div>
           ))}
