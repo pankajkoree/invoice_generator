@@ -24,7 +24,7 @@ const Classical = () => {
   };
 
   const deleteItem = () => {
-    console.log(items);
+    console.log(items.id);
   };
 
   return (
