@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import plus from "../../../public/plus.png";
-import deleteIcon from "../../../public/delete.png"
+import deleteIcon from "../../../public/delete.png";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -23,6 +23,10 @@ const Business = () => {
 
   const addNewLine = () => {
     setItems((prevItems) => [...prevItems, { id: prevItems.length + 1 }]);
+  };
+
+  const deleteItem = () => {
+    console.log(items);
   };
 
   return (
