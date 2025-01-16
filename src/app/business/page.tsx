@@ -130,7 +130,6 @@ const Business = () => {
             <p className="xl:w-[10%]">Total</p>
           </div>
 
-          {/* item's inputs */}
           {/* <div className="flex rounded-t-xl text-xl text-white p-2 gap-1">
             <div className="xl:w-[40%]">
               <Input placeholder="item's name" />
@@ -159,7 +158,6 @@ const Business = () => {
               <Label className="text-xl">{1}</Label>
             </div>
           </div> */}
-
           {/* Items Inputs */}
           {items.map((item, index) => (
             <div
@@ -180,7 +178,7 @@ const Business = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-white text-center"
@@ -200,7 +198,7 @@ const Business = () => {
                 />
                 <p>%</p>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <input
                   type="number"
                   className="w-full rounded p-2 border text-white text-center"
@@ -216,7 +214,7 @@ const Business = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <input
                   type="number"
@@ -233,17 +231,17 @@ const Business = () => {
                   }
                 />
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">
                   {(item.price || 0) * (item.quantity || 0)}
                 </label>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
-              <div className="xl:w-[10%] flex justify-center text-slate-700 gap-1">
+              <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
@@ -261,7 +259,6 @@ const Business = () => {
               </div>
             </div>
           ))}
-
           {/* Add New Line Button */}
           <div
             className="relative flex items-center justify-center gap-2 p-2 border-2 border-dashed cursor-pointer"
