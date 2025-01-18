@@ -239,7 +239,7 @@ const Business = () => {
               </div>
               <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
-                <label className="text-xl">{index + 1}</label>
+                <label className="text-xl">{index}</label>
               </div>
               <div className="xl:w-[10%] flex justify-center items-center text-slate-700 gap-1">
                 <p>₹</p>
