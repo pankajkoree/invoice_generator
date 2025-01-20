@@ -242,6 +242,18 @@ const Moveepix = () => {
                 <p>₹</p>
                 <label className="text-xl">{index + 1}</label>
               </div>
+
+              {/* delete item button */}
+              <div
+                className="relative flex justify-center items-center cursor-pointer"
+                onClick={deleteItem}
+              >
+                <Image
+                  src={deleteIcon}
+                  alt="delete"
+                  className="xl:w-8 xl:h-8 hover:bg-red-300 hover:rounded-full hover:"
+                />
+              </div>
             </div>
           ))}
 
