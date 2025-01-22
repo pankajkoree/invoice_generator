@@ -47,7 +47,7 @@ const Moveepix = () => {
           <div className="flex flex-col gap-1">
             <div className="relative flex items-center">
               <Label htmlFor="invoice_number" className="xl:w-[20%] text-xl">
-                Invoice No.
+                Invoice Number
               </Label>
               <Input id="invoice_number" className="xl:w-[30%]" />
             </div>
